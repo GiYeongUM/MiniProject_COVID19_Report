@@ -10,7 +10,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff492ddd),
+        backgroundColor: Color(0xff16e0e0),
         body: Center(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -36,7 +36,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Align(child: Text('NewsBoard', style: TextStyle( color: Colors.white, fontSize: 40, fontFamily: 'BebasNeue'), textAlign: TextAlign.right, ),),
+            Align(child: Text('WithCorona', style: TextStyle( color: Colors.white, fontSize: 40, fontFamily: 'BebasNeue'), textAlign: TextAlign.right, ),),
           ],
         ),
       ),
