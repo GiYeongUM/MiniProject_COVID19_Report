@@ -1,3 +1,4 @@
+import 'package:covid19/Controller/SocialDistancingController.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
@@ -8,8 +9,40 @@ class SocialDistancingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    String htmlSource1 = """<div class="rssm_graph">
+    final socialDistancingScreen = Get.put(SocialDistancingController());
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff16e0e0),
+        leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Get.back();},),
+        title: Text(
+          'Social Distance',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontFamily: 'BebasNeue'),
+          textAlign: TextAlign.right,
+        ),
+      ),
+        body: Container(
+          color: Colors.white,
+          height: double.infinity,
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              color: Colors.white,
+              child: FutureBuilder<String>(
+                future: socialDistancingScreen.getSocialData(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasError) {
+                    print(snapshot.error);
+                    return Container();
+                  }
+                  else if(snapshot.hasData){
+                    if(snapshot.data == 'success'){
+                      return Column(
+                        children: [
+                          Html(
+                            data: """<div class="rssm_graph">
 																				<div id="main_maplayout1">
 																					<svg id="Layer_1" x="0px" y="0px" width="362px" height="480px" viewBox="0 0 400 530" enable-background="new 0 0 362 480" xml:space="preserve" tabindex="-1" focusable="false">
 																						<g>
@@ -116,29 +149,37 @@ class SocialDistancingScreen extends StatelessWidget {
 																						</g>
 																					</svg>
 																				</div>
-																			</div>""";
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff16e0e0),
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){Get.back();},),
-        title: Text(
-          'Social Distance',
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontFamily: 'BebasNeue'),
-          textAlign: TextAlign.right,
-        ),
-      ),
-        body: Container(
-          color: Colors.white,
-          height: double.infinity,
-          child: Center(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              color: Colors.white,
-              child: Html(
-                data: htmlSource1,
+																			</div>""",
+                          ),
+                          Flexible(child: Container(
+                            child: Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    Container(width: 15, height: 15, color: Color(0xffe60000),),
+                                    Text('  = 4단계')
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Container(width: 15, height: 15, color: Color(0xfffc7001),),
+                                    Text('  = 3단계')
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ))
+                        ],
+                      );
+                    }
+                    else {
+                      return Container(child: Center(child: Text('서버 오류'),),);
+                    }
+                  }
+                  else {
+                    return Container(margin: EdgeInsets.all(30), child: Center(child: CircularProgressIndicator()));
+                  }
+                },
               ),
             ),
           ),

@@ -13,26 +13,18 @@ let dataString;
 // ### 1. request 사용 ###
 
 router.get('/', function(req, res, next) {
-    request.post(url, function (err, res, body) {
-
-        const $ = cheerio.load(body)
-        let parentTag = $("div.regional_step_status div.rss_map div.rssm_graph div#main_maplayout1 button");
-
+    request(url, function(error, response, body){
         let resultArr = [];
-        parentTag.each(function(i, elem){
-            let itemObj = {
-                _text : $(this).find("strong").text(),
-                _num :$(this).find("span.num").text()
-            }
-            resultArr.push(itemObj); 
-        })
 
-        resultArr.forEach(elem => {
-            log(`현재 ${elem._text}의 현황 : ${elem._num}`);
-            dataString = elem._text;
-        })
-    })
-    res.send(dataString);
+        const $ = cheerio.load(body);
+        let colArr = $(".main_maplayout1")
+
+        for(let i = 0; i < colArr.length; i++){
+            resultArr.push(colArr[i].children[1])
+        }
+        res.json(resultArr)
+    });
+
 });
 
 // request.post(url, function (err, res, body) { // 웹에 요청을 보내고, 요청에 해당하는 페이지를 가져오는 request 사용.
