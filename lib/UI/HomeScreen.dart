@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Obx(
                         () => AnimatedOpacity(
-                          duration: Duration(milliseconds: 700),
+                          duration: Duration(milliseconds: 400),
                           opacity: homeController.gridAnimation1.value ? 1.0 : 0.0,
                           child: AnimatedContainer(
                             duration: Duration(milliseconds: 500),
@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                               onTap: (){
                                 homeController.gridAnimation2.value = false;
                                 homeController.gridAnimation3.value = false;
-                                Future.delayed(const Duration(milliseconds: 500), () { Get.to(() => SocialDistancingScreen());
+                                Future.delayed(const Duration(milliseconds: 400), () { Get.to(() => SocialDistancingScreen());
                                 homeController.gridAnimation2.value = true;
                                 homeController.gridAnimation3.value = true;
                                 });
@@ -92,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Obx(
                         () => AnimatedOpacity(
-                          duration: Duration(milliseconds: 700),
+                          duration: Duration(milliseconds: 400),
                           opacity: homeController.gridAnimation2.value ? 1.0 : 0.0,
                           child: AnimatedContainer(
                             duration: Duration(milliseconds: 500),
@@ -102,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                               onTap: (){
                                 homeController.gridAnimation1.value = false;
                                 homeController.gridAnimation3.value = false;
-                                Future.delayed(const Duration(milliseconds: 500), () { Get.to(() => VaccineScreen());
+                                Future.delayed(const Duration(milliseconds: 400), () { Get.to(() => VaccineScreen());
                                 homeController.gridAnimation1.value = true;
                                 homeController.gridAnimation3.value = true;
                                 });
@@ -137,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Obx(
                         () => AnimatedOpacity(
-                          duration: Duration(milliseconds: 700),
+                          duration: Duration(milliseconds: 400),
                           opacity: homeController.gridAnimation3.value ? 1.0 : 0.0,
                           child: AnimatedContainer(
                             duration: Duration(milliseconds: 500),
@@ -146,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                               onTap: () {
                                     homeController.gridAnimation2.value = false;
                                     homeController.gridAnimation1.value = false;
-                                    Future.delayed(const Duration(milliseconds: 500), () { Get.to(() => ConfirmedScreen());
+                                    Future.delayed(const Duration(milliseconds: 400), () { Get.to(() => ConfirmedScreen());
                                     homeController.gridAnimation2.value = true;
                                     homeController.gridAnimation1.value = true;
                                     });

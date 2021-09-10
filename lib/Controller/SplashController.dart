@@ -19,7 +19,7 @@ class SplashController extends GetxController {
     setVisibilityImage();
     setVisibilityText();
     try {
-      var request = http.Request('GET', Uri.parse(Url.confirmedUrl));
+    var request = http.Request('GET', Uri.parse(Url.confirmedUrl));
       http.StreamedResponse response = await request.send();
       if (response.statusCode == 200) {
         Future.delayed(const Duration(seconds: 2), () {

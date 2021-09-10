@@ -6,11 +6,10 @@ import 'package:get/get.dart';
 
 class ConfirmedScreen extends StatelessWidget {
   const ConfirmedScreen({Key? key}) : super(key: key);
-
+  static ConfirmedController confirmedController = Get.put(ConfirmedController());
   @override
   Widget build(BuildContext context) {
 
-    final confirmedController = Get.put(ConfirmedController());
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff16e0e0),
