@@ -11,9 +11,9 @@
 <h1 align="center">
   <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image1.jpeg" width = "800px"/><br/>
  </h1>
-- 지역별 확진자 비율 조회
-- 지역별 백신 접종 완료율 조회
-- 지역별 거리두기 조회
+- 지역별 확진자 비율 조회 </br>
+- 지역별 백신 접종 완료율 조회 </br>
+- 지역별 거리두기 조회 </br>
 </br>
 
 ## 팀원
