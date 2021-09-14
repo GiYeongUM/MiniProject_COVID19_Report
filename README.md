@@ -22,11 +22,11 @@
 
 ## 앱 이미지
 <h1 align="center">
-  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image1_1.jpeg" width = "200px">
-  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image2.jpeg" width = "200px">
-  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image3.jpeg" width = "200px">
-  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image4.jpeg" width = "200px">
-  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image5.jpeg" width = "200px">
+  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image1_1.jpeg" width = "180px">
+  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image2.jpeg" width = "180px">
+  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image3.jpeg" width = "180px">
+  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image4.jpeg" width = "180px">
+  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image5.jpeg" width = "180px">
   <p>[플레이스토어 등록 이미지]<br/><p/>
 </h1>
 
