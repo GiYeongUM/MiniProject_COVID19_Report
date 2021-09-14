@@ -1,6 +1,6 @@
 # covid19
 
-COVID19 Report
+COVID19 Report 개인 프로젝트
 
 ## Getting Started
 
