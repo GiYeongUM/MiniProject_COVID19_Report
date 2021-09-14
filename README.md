@@ -22,6 +22,7 @@
 
 ## 앱 이미지
 <h1 align="center">
+  <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image1_1.jpeg" width = "200px">
   <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image2.jpeg" width = "200px">
   <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image3.jpeg" width = "200px">
   <img src = "https://github.com/GiYeongUM/MiniProject_COVID19_Report/blob/main/image4.jpeg" width = "200px">
